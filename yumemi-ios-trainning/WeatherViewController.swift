@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import YumemiWeather
 
 final class WeatherViewController: UIViewController {
     
