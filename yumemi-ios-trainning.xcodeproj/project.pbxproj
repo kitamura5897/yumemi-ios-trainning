@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		A888D97829A1BA50008F4039 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A888D97729A1BA50008F4039 /* AppDelegate.swift */; };
 		A888D97A29A1BA50008F4039 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A888D97929A1BA50008F4039 /* SceneDelegate.swift */; };
-		A888D97C29A1BA50008F4039 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A888D97B29A1BA50008F4039 /* ViewController.swift */; };
-		A888D97F29A1BA50008F4039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A888D97D29A1BA50008F4039 /* Main.storyboard */; };
+		A888D97C29A1BA50008F4039 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A888D97B29A1BA50008F4039 /* WeatherViewController.swift */; };
 		A888D98129A1BA53008F4039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A888D98029A1BA53008F4039 /* Assets.xcassets */; };
 		A888D98429A1BA53008F4039 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A888D98229A1BA53008F4039 /* LaunchScreen.storyboard */; };
 		A888D98F29A1BA53008F4039 /* yumemi_ios_trainningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A888D98E29A1BA53008F4039 /* yumemi_ios_trainningTests.swift */; };
@@ -39,8 +38,7 @@
 		A888D97429A1BA50008F4039 /* yumemi-ios-trainning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yumemi-ios-trainning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A888D97729A1BA50008F4039 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A888D97929A1BA50008F4039 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A888D97B29A1BA50008F4039 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A888D97E29A1BA50008F4039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A888D97B29A1BA50008F4039 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		A888D98029A1BA53008F4039 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A888D98329A1BA53008F4039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A888D98529A1BA53008F4039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,8 +99,7 @@
 			children = (
 				A888D97729A1BA50008F4039 /* AppDelegate.swift */,
 				A888D97929A1BA50008F4039 /* SceneDelegate.swift */,
-				A888D97B29A1BA50008F4039 /* ViewController.swift */,
-				A888D97D29A1BA50008F4039 /* Main.storyboard */,
+				A888D97B29A1BA50008F4039 /* WeatherViewController.swift */,
 				A888D98029A1BA53008F4039 /* Assets.xcassets */,
 				A888D98229A1BA53008F4039 /* LaunchScreen.storyboard */,
 				A888D98529A1BA53008F4039 /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				A888D98429A1BA53008F4039 /* LaunchScreen.storyboard in Resources */,
 				A888D98129A1BA53008F4039 /* Assets.xcassets in Resources */,
-				A888D97F29A1BA50008F4039 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A888D97C29A1BA50008F4039 /* ViewController.swift in Sources */,
+				A888D97C29A1BA50008F4039 /* WeatherViewController.swift in Sources */,
 				A888D97829A1BA50008F4039 /* AppDelegate.swift in Sources */,
 				A888D97A29A1BA50008F4039 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A888D97D29A1BA50008F4039 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A888D97E29A1BA50008F4039 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A888D98229A1BA53008F4039 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -441,7 +429,6 @@
 				INFOPLIST_FILE = "yumemi-ios-trainning/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +455,6 @@
 				INFOPLIST_FILE = "yumemi-ios-trainning/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

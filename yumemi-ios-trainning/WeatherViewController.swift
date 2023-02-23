@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WeatherViewController.swift
 //  yumemi-ios-trainning
 //
 //  Created by 喜多村海人 on 2023/02/19.
@@ -11,7 +11,7 @@ final class WeatherViewController: UIViewController {
     
     private let imageview: UIImageView = {
         let imageview = UIImageView()
-        imageview.backgroundColor = .red
+        imageview.backgroundColor = .gray
         imageview.translatesAutoresizingMaskIntoConstraints = false
         return imageview
     }()
@@ -80,13 +80,15 @@ final class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         setupView()
         setupConstraint()
     }
-    
+}
+
+private extension WeatherViewController {
     
     func setupView() {
+        view.backgroundColor = .systemBackground
         view.addSubview(totalStackView)
         view.addSubview(buttonStackView)
     }
@@ -94,16 +96,13 @@ final class WeatherViewController: UIViewController {
     func setupConstraint() {
         [totalStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
          totalStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-    
+         
          imageview.widthAnchor.constraint(equalToConstant: 200),
          imageview.heightAnchor.constraint(equalTo: imageview.widthAnchor),
-        
+         
          buttonStackView.topAnchor.constraint(equalTo: totalStackView.bottomAnchor, constant: 80),
          buttonStackView.centerXAnchor.constraint(equalTo: totalStackView.centerXAnchor),
          buttonStackView.widthAnchor.constraint(equalTo: totalStackView.widthAnchor)].forEach { $0.isActive = true }
-        
-        
     }
-    
 }
 
