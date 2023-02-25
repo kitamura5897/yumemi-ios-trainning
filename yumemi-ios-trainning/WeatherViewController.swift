@@ -11,10 +11,10 @@ import YumemiWeather
 final class WeatherViewController: UIViewController {
     
     private let imageview: UIImageView = {
-        let imageview = UIImageView()
-        imageview.contentMode = .scaleAspectFill
-        imageview.translatesAutoresizingMaskIntoConstraints = false
-        return imageview
+        let weatherimageview = UIImageView()
+        weatherimageview.contentMode = .scaleAspectFill
+        weatherimageview.translatesAutoresizingMaskIntoConstraints = false
+        return weatherimageview
     }()
     
     private let rightlabel: UILabel = {
