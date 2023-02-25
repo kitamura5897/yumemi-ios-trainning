@@ -58,7 +58,7 @@ final class WeatherViewController: UIViewController {
     private lazy var leftbutton: UIButton = {
         let button = UIButton()
         button.setTitle("Close", for: .normal)
-        button.setTitleColor(UIColor.blue, for: .normal)
+        button.setTitleColor(.blue, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.masksToBounds = true
         return button
