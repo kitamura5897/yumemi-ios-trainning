@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A86F6C8429A75AAA0013F12A /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = A86F6C8329A75AAA0013F12A /* YumemiWeather */; };
+		A86F6C8829AA093D0013F12A /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86F6C8729AA093D0013F12A /* Weather.swift */; };
 		A888D97829A1BA50008F4039 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A888D97729A1BA50008F4039 /* AppDelegate.swift */; };
 		A888D97A29A1BA50008F4039 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A888D97929A1BA50008F4039 /* SceneDelegate.swift */; };
 		A888D97C29A1BA50008F4039 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A888D97B29A1BA50008F4039 /* WeatherViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A86F6C8729AA093D0013F12A /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		A888D97429A1BA50008F4039 /* yumemi-ios-trainning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yumemi-ios-trainning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A888D97729A1BA50008F4039 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A888D97929A1BA50008F4039 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				A888D98029A1BA53008F4039 /* Assets.xcassets */,
 				A888D98229A1BA53008F4039 /* LaunchScreen.storyboard */,
 				A888D98529A1BA53008F4039 /* Info.plist */,
+				A86F6C8729AA093D0013F12A /* Weather.swift */,
 			);
 			path = "yumemi-ios-trainning";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A86F6C8829AA093D0013F12A /* Weather.swift in Sources */,
 				A888D97C29A1BA50008F4039 /* WeatherViewController.swift in Sources */,
 				A888D97829A1BA50008F4039 /* AppDelegate.swift in Sources */,
 				A888D97A29A1BA50008F4039 /* SceneDelegate.swift in Sources */,

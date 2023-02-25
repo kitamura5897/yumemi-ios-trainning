@@ -109,13 +109,8 @@ private extension WeatherViewController {
     
     @objc func rightButtonDidTap() {
         let weatherString = YumemiWeather.fetchWeatherCondition()
-        if weatherString == "sunny" {
-            imageview.image = UIImage(named: weatherString)?.withTintColor(.red)
-        } else if weatherString == "rainy" {
-            imageview.image = UIImage(named: weatherString)?.withTintColor(.blue)
-        } else if weatherString == "cloudy" {
-            imageview.image = UIImage(named: weatherString)?.withTintColor(.gray)
-        }
+        guard let weather = Weather(rawValue: weatherString) else { return }
+        imageview.image = weather.image
     }
 }
 
