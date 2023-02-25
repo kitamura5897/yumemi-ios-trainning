@@ -10,11 +10,11 @@ import YumemiWeather
 
 final class WeatherViewController: UIViewController {
     
-    private let imageview: UIImageView = {
-        let weatherimageview = UIImageView()
-        weatherimageview.contentMode = .scaleAspectFill
-        weatherimageview.translatesAutoresizingMaskIntoConstraints = false
-        return weatherimageview
+    private let weatherImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
     private let rightlabel: UILabel = {
@@ -73,7 +73,7 @@ final class WeatherViewController: UIViewController {
     }()
     
     private lazy var totalStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [imageview, labelStackView])
+        let stackView = UIStackView(arrangedSubviews: [weatherImageView, labelStackView])
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -96,6 +96,7 @@ private extension WeatherViewController {
     }
     
     func setupConstraint() {
+<<<<<<< HEAD
         NSLayoutConstraint.activate([
             totalStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             totalStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -105,12 +106,23 @@ private extension WeatherViewController {
             buttonStackView.centerXAnchor.constraint(equalTo: totalStackView.centerXAnchor),
             buttonStackView.widthAnchor.constraint(equalTo: totalStackView.widthAnchor),
         ])
+=======
+        [totalStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+         totalStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+         
+         weatherImageView.widthAnchor.constraint(equalToConstant: 200),
+         weatherImageView.heightAnchor.constraint(equalTo: weatherImageView.widthAnchor),
+         
+         buttonStackView.topAnchor.constraint(equalTo: totalStackView.bottomAnchor, constant: 80),
+         buttonStackView.centerXAnchor.constraint(equalTo: totalStackView.centerXAnchor),
+         buttonStackView.widthAnchor.constraint(equalTo: totalStackView.widthAnchor)].forEach { $0.isActive = true }
+>>>>>>> 4f9408c (imageViewの命名変更)
     }
     
     @objc func rightButtonDidTap() {
         let weatherString = YumemiWeather.fetchWeatherCondition()
         guard let weather = Weather(rawValue: weatherString) else { return }
-        imageview.image = weather.image
+        weatherImageView.image = weather.image
     }
 }
 
