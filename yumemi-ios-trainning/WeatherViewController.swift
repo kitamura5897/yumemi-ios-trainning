@@ -61,6 +61,7 @@ final class WeatherViewController: UIViewController {
         button.setTitleColor(UIColor.blue, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(leftButtonDidTap), for: .touchUpInside)
         return button
     }()
     
@@ -117,5 +118,10 @@ private extension WeatherViewController {
             imageview.image = UIImage(named: weatherString)?.withTintColor(.gray)
         }
     }
+    
+    @objc func leftButtonDidTap() {
+        dismiss(animated: true)
+    }
 }
+
 
