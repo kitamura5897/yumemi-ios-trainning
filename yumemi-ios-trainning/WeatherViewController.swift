@@ -94,15 +94,15 @@ private extension WeatherViewController {
     }
     
     func setupConstraint() {
-        [totalStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-         totalStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-         
-         imageview.widthAnchor.constraint(equalToConstant: 200),
-         imageview.heightAnchor.constraint(equalTo: imageview.widthAnchor),
-         
-         buttonStackView.topAnchor.constraint(equalTo: totalStackView.bottomAnchor, constant: 80),
-         buttonStackView.centerXAnchor.constraint(equalTo: totalStackView.centerXAnchor),
-         buttonStackView.widthAnchor.constraint(equalTo: totalStackView.widthAnchor)].forEach { $0.isActive = true }
+        NSLayoutConstraint.activate([
+            totalStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            totalStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            imageview.widthAnchor.constraint(equalToConstant: 200),
+            imageview.heightAnchor.constraint(equalTo: imageview.widthAnchor),
+            buttonStackView.topAnchor.constraint(equalTo: totalStackView.bottomAnchor, constant: 80),
+            buttonStackView.centerXAnchor.constraint(equalTo: totalStackView.centerXAnchor),
+            buttonStackView.widthAnchor.constraint(equalTo: totalStackView.widthAnchor),
+        ])
     }
 }
 
