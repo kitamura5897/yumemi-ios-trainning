@@ -96,27 +96,15 @@ private extension WeatherViewController {
     }
     
     func setupConstraint() {
-<<<<<<< HEAD
         NSLayoutConstraint.activate([
             totalStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             totalStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            imageview.widthAnchor.constraint(equalToConstant: 200),
-            imageview.heightAnchor.constraint(equalTo: imageview.widthAnchor),
+            weatherImageView.widthAnchor.constraint(equalToConstant: 200),
+            weatherImageView.heightAnchor.constraint(equalTo: weatherImageView.widthAnchor),
             buttonStackView.topAnchor.constraint(equalTo: totalStackView.bottomAnchor, constant: 80),
             buttonStackView.centerXAnchor.constraint(equalTo: totalStackView.centerXAnchor),
             buttonStackView.widthAnchor.constraint(equalTo: totalStackView.widthAnchor),
         ])
-=======
-        [totalStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-         totalStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-         
-         weatherImageView.widthAnchor.constraint(equalToConstant: 200),
-         weatherImageView.heightAnchor.constraint(equalTo: weatherImageView.widthAnchor),
-         
-         buttonStackView.topAnchor.constraint(equalTo: totalStackView.bottomAnchor, constant: 80),
-         buttonStackView.centerXAnchor.constraint(equalTo: totalStackView.centerXAnchor),
-         buttonStackView.widthAnchor.constraint(equalTo: totalStackView.widthAnchor)].forEach { $0.isActive = true }
->>>>>>> 4f9408c (imageViewの命名変更)
     }
     
     @objc func rightButtonDidTap() {
@@ -125,4 +113,3 @@ private extension WeatherViewController {
         weatherImageView.image = weather.image
     }
 }
-
