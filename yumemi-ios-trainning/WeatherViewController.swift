@@ -6,14 +6,15 @@
 //
 
 import UIKit
+import YumemiWeather
 
 final class WeatherViewController: UIViewController {
     
-    private let imageview: UIImageView = {
-        let imageview = UIImageView()
-        imageview.backgroundColor = .gray
-        imageview.translatesAutoresizingMaskIntoConstraints = false
-        return imageview
+    private let weatherImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
     private let rightlabel: UILabel = {
@@ -44,19 +45,20 @@ final class WeatherViewController: UIViewController {
         return stackView
     }()
     
-    private let rightbutton: UIButton = {
+    private lazy var rightbutton: UIButton = {
         let button = UIButton()
         button.setTitle("Reload", for: .normal)
-        button.setTitleColor(UIColor.blue, for: .normal)
+        button.setTitleColor(.blue, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(rightButtonDidTap), for: .touchUpInside)
         return button
     }()
     
-    private let leftbutton: UIButton = {
+    private lazy var leftbutton: UIButton = {
         let button = UIButton()
         button.setTitle("Close", for: .normal)
-        button.setTitleColor(UIColor.blue, for: .normal)
+        button.setTitleColor(.blue, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.masksToBounds = true
         return button
@@ -71,7 +73,7 @@ final class WeatherViewController: UIViewController {
     }()
     
     private lazy var totalStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [imageview, labelStackView])
+        let stackView = UIStackView(arrangedSubviews: [weatherImageView, labelStackView])
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -94,6 +96,7 @@ private extension WeatherViewController {
     }
     
     func setupConstraint() {
+<<<<<<< HEAD
         NSLayoutConstraint.activate([
             totalStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             totalStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -103,6 +106,23 @@ private extension WeatherViewController {
             buttonStackView.centerXAnchor.constraint(equalTo: totalStackView.centerXAnchor),
             buttonStackView.widthAnchor.constraint(equalTo: totalStackView.widthAnchor),
         ])
+=======
+        [totalStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+         totalStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+         
+         weatherImageView.widthAnchor.constraint(equalToConstant: 200),
+         weatherImageView.heightAnchor.constraint(equalTo: weatherImageView.widthAnchor),
+         
+         buttonStackView.topAnchor.constraint(equalTo: totalStackView.bottomAnchor, constant: 80),
+         buttonStackView.centerXAnchor.constraint(equalTo: totalStackView.centerXAnchor),
+         buttonStackView.widthAnchor.constraint(equalTo: totalStackView.widthAnchor)].forEach { $0.isActive = true }
+>>>>>>> 4f9408c (imageViewの命名変更)
+    }
+    
+    @objc func rightButtonDidTap() {
+        let weatherString = YumemiWeather.fetchWeatherCondition()
+        guard let weather = Weather(rawValue: weatherString) else { return }
+        weatherImageView.image = weather.image
     }
 }
 
